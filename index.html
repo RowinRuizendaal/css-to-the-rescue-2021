@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>CSS to the rescue</title>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="container">
+                <h3>:dir()</h3>
+                <blockquote>"The :dir() pseudo-class in CSS allows elements to be selected based on the direction of the language"</blockquote>
+                <div dir="rtl">
+                    <h1>right to left</h1>
+                    <p>Sometimes I think the surest sign that intelligent life exists elsewhere in the universe is that none of it has tried to contact us.</p>
+                    <cite>&mdash;Bill Watterson</cite>
+                  </div>
+                <pre>
+                    <code>    
+                    div:dir(rtl) {
+                    background: #f63f63;
+                    color: #fff;
+                    }
+                    </code>
+                  </pre>
+            </div>
+            <div class="container">
+                <h3>::selection</h3>
+                <blockquote>"You can change the background color and color of selected text by styling."</blockquote>
+                <div class="border">
+                    <p class='example-background-color'>You can select me for a different background color.</p>
+                  </div>
+                <pre>
+                    <code>    
+                        p::selection {
+                            background-color: #f63f63;
+                          }
+                        </code>
+                  </pre>
+            </div>
+            <div class="container">
+                <h3>:blank</h3>
+                <blockquote>":blank will select elements that contain nothing at all, or contain only an HTML comment."</blockquote>
+                <div class="border">
+                    <p>This paragraph is not empty or blank.</p>
+                    <p><!-- nothing but a comment--></p>
+                  </div>
+                <pre>
+                    <code>    
+                        p:blank {
+                            display: none;
+                          }
+                        </code>
+                  </pre>
+            </div>
+            <div class="container">
+                <h3>Descendant</h3>
+                <blockquote>"A descendant selector in CSS is any selector with white space between two selectors without a combinator."</blockquote>
+                <div class="border">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ipsum cumque explicabo cum nihil perferendis cupiditate obcaecati autem soluta iusto porro sunt aspernatur rerum, itaque quasi sed. Impedit, odio sint.</p>
+                  </div>
+                <pre>
+                    <code>    
+                        .border h3  {  }
+                        </code>
+                  </pre>
+            </div>
+            <div class="container">
+                <h3>::first-line</h3>
+                <blockquote>"The ::first-line pseudo-element is for applying styles to the first line of an element."</blockquote>
+                <div class="border">
+                    <p class="first-line">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ipsum cumque explicabo cum nihil perferendis cupiditate obcaecati autem soluta iusto porro sunt aspernatur rerum, itaque quasi sed. Impedit, odio sint.</p>
+                  </div>
+                <pre>
+                    <code>    
+                        p::first-line {
+                            color: aqua;
+                          }
+                        </code>
+                  </pre>
+            </div>
+            <div class="container">
+                <h3>::first-letter</h3>
+                <blockquote>"::first-letter is a pseudo element which allows you to style the first letter in an element, without needing to stick a span tag"</blockquote>
+                <div class="border">
+                    <p class="first-letter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ipsum cumque explicabo cum nihil perferendis cupiditate obcaecati autem soluta iusto porro sunt aspernatur rerum, itaque quasi sed. Impedit, odio sint.</p>
+                  </div>
+                <pre>
+                    <code>    
+                        p::first-letter {
+                            color: #f63f63;
+                        }
+                        </code>
+                  </pre>
+            </div>
+            <div class="container">
+                <h3>:any-link</h3>
+                <blockquote>"The :any-link pseudo-class in CSS provides a method for selecting elements that are the source anchor of a hyperlink."</blockquote>
+                <div class="border">
+                    <p class="first-letter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ipsum cumque explicabo cum nihil perferendis <a href="https://google.com" target="_blank">Link</a> autem soluta iusto porro sunt aspernatur rerum, itaque quasi sed. Impedit, odio sint.</p>
+                  </div>
+                <pre>
+                    <code>    
+                        :any-link {
+                            color: aqua;
+                            text-decoration: none;
+                          }
+                        </code>
+                  </pre>
+            </div>
+            <div class="container">
+                <h3>::marker</h3>
+                <blockquote>"The ::marker pseudo-element is for applying list-style attributes on a given element. It effectively targets the bullet-point or number generated by a list-item"</blockquote>
+                <div class="border">
+                    <p class="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ipsum cumque explicabo cum nihil perferendis cupiditate obcaecati autem soluta iusto porro sunt aspernatur rerum, itaque quasi sed. Impedit, odio sint.</p>
+                  </div>
+                <pre>
+                    <code>    
+                        p.note {
+                            counter-increment: note-counter;
+                        }
+                        p.note::marker {
+                            content: "CSS:" counter(note-counter) ":";
+                          }
+                        </code>
+                  </pre>
+            </div>
+            <div class="container">
+                <h3>:lang()</h3>
+                <blockquote>"The :lang() pseudo class selector in CSS matches elements based on the context of their given language attribute."</blockquote>
+                <div class="border">
+                    <p><q>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</q></p>
+                  </div>
+                <pre>
+                    <code>    
+                        :lang(en) q { 
+                            quotes: '“' '”'; 
+                          }
+                        </code>
+                  </pre>
+            </div>
+        </section>
+        
+    </main>
+</body>
+</html>

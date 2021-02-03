@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --backgroundColor: #1a1f2b;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--backgroundColor);
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    margin-top: 10vh;
+}
+
+.container div {
+    margin-top: 2vh;
+    min-height: 10rem;
+}
+
+h3 {
+    color: white;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+
+
+
+p,blockquote {
+    color: white;
+    font-weight: 200;
+    max-width: 20em;
+    text-align: center;
+}
+
+pre code {
+    background-color: #eee;
+    border: 1px solid #999;
+    display: block;
+    padding: 20px;
+    min-width: 20rem;
+    min-height: 13rem;
+
+  }
+
+  div:dir(rtl) {
+    background: #f63f63;
+    color: #fff;
+  }
+
+  .example-background-color::selection {
+    background-color: #f63f63;
+  }
+
+  .border {
+      border: 1px solid #f63f63;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+
+
+  p:blank {
+    display: none;
+  }
+
+  p:-moz-only-whitespace {
+      display: none;
+  }
+
+  .border h2  {  
+      clip-path: circle(90%);
+  }
+
+  .first-line::first-line {
+    color: aqua;
+  }
+
+  .first-letter::first-letter {
+      color: #f63f63;
+      font-weight: bold;
+  }
+
+
+  :any-link {
+    color: aqua;
+    text-decoration: none;
+  }
+
+  :-webkit-any-link {
+    color: aqua;
+    text-decoration: none;
+  }
+
+:-moz-any-link {
+    color: aqua;
+    text-decoration: none;
+  }
+
+
+
+  p.note {
+    counter-increment: note-counter;
+    display: list-item;
+    color: #f63f63;
+    margin-left: 5em;
+  }
+
+  p.note::marker {
+    content: "CSS:" counter(note-counter) ":";
+  }
+
+
+  q:before { 
+      content: open-quote; 
+    }
+
+  q:after { 
+      content: close-quote; 
+    }
+
+  :lang(en) q { 
+      quotes: '“' '”'; 
+    }

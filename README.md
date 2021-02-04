@@ -1,3 +1,20 @@
+# What do i want to make?
+
+I want to make a slick food menu card based on Grid/flexbox.
+
+## requirements
+
+Two colors
+
+prefers-color-scheme
+
+
+### Week 1 :
+
+
+
+
+
 # CSS to the Rescue @cmda-minor-web 2020 - 2021
 
 Wij vinden het web fascinerend. De laatste jaren is CSS een volwassen en zeer krachtige taal geworden (niet langer een bottleneck - integendeel). Veel van de (nieuwe) **CSS-lekkernijen** worden echter nog niet ten volle benut. Sommige delen van de spec worden onterecht (nog) niet bemind, andere delen zijn zo groot en complex dat we mogelijkheden nog niet hebben doorgrond. Aan jou de  mooie opdracht om de onontgonnen delen van de CSS-wereld in kaart te brengen.

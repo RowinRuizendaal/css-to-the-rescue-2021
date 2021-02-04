@@ -11,6 +11,33 @@
     --backgroundColor: #1a1f2b;
 }
 
+
+header nav {
+  background-color: rgb(82, 82, 82);
+  /* margin-bottom: 2rem; */
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+header nav a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .3s;
+}
+
+header nav a.active, header nav a:hover {
+  background-color: grey;
+}
+
+
+
 section {
     position: relative;
     width: 100%;

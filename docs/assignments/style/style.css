@@ -9,8 +9,8 @@
 }
 
 :root {
-    --donkerblauw: #1a1f2b;
-    --groen: #f63f63;
+    --donkerblauw: #1A5E63;
+    --groen: lightblue;
 }
 
 body {
@@ -18,6 +18,7 @@ body {
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 1px;
+    background-color: var(--donkerblauw);
 }
 
 
@@ -31,19 +32,29 @@ h2 {
     justify-content: center;
 }
 
+h3 {
+    color: var(--groen);
+}
+
 p {
     line-height: 1.25;
     overflow: hidden;
+    color: var(--groen);
+    opacity: 0.6;
+    font-weight: 300;
 }
 
 /* heading */
 
 /* Mother div of everything */
 div:nth-child(1) {
+    grid-template-columns: repeat(3, auto);
     display: grid;
-    grid-template-columns: 1.35fr 1.35fr 1fr 1.35fr 1.35fr;
     grid-auto-rows: auto;
+    grid-gap: 10px;
 }
+
+
 
 /* Selects all <header> elements where the parent is a <body> element */
 body > header:nth-child(1) {
@@ -70,12 +81,47 @@ h1:nth-child(1) > span:nth-child(2) {
 section {
     text-align: center;
     position: relative;
-    display: grid;
     justify-items: center;
     margin-bottom: 8px;
 }
 
+article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
+article p {
+    order: 1;
+    flex-basis: 100%;
+}
+
+
+section article div {
+    margin-left: 6px;
+    color: var(--groen);
+    opacity: 0.6;
+    font-weight: 400;
+}
+
+section article div::before {
+    content: '€';
+    color: var(--groen);
+    opacity: 0.6;
+    font-weight: 500;
+}
+
+
+
+div:nth-child(1) > section:nth-child(6) {
+    grid-column: 1/6;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    margin: 36px 16px 24px;
+    position: relative;
+    place-items: center; 
+}
 
 div:nth-child(1) > section:nth-child(7) {
     grid-column: 1/6;
@@ -85,4 +131,10 @@ div:nth-child(1) > section:nth-child(7) {
     grid-auto-rows: auto;
     margin: 36px 16px 24px;
     position: relative;
+    place-items: center;
+}
+
+blockquote {
+    color: var(--groen);
+    font-weight: 900;
 }

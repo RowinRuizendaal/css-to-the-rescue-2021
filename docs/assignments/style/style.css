@@ -21,120 +21,179 @@ body {
     background-color: var(--donkerblauw);
 }
 
+main {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 2rem;
+}
 
-h2 {
-    color: var(--groen);
+
+
+header:nth-child(1) {
     text-transform: uppercase;
     font-size: 20px;
     letter-spacing: 0.025em;
     display: flex;
     text-align: center;
     justify-content: center;
-}
-
-h3 {
-    color: var(--groen);
-}
-
-p {
-    line-height: 1.25;
-    overflow: hidden;
-    color: var(--groen);
-    opacity: 0.6;
-    font-weight: 300;
-}
-
-/* heading */
-
-/* Mother div of everything */
-div:nth-child(1) {
-    grid-template-columns: repeat(3, auto);
-    display: grid;
-    grid-auto-rows: auto;
-    grid-gap: 10px;
-}
-
-
-
-/* Selects all <header> elements where the parent is a <body> element */
-body > header:nth-child(1) {
-    text-transform: uppercase;
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-    font-size: 3vw;
-    color: var(--groen);
+    
 }
 
-body > header:nth-child(1) p {
-    color: var(--groen);
-    font-size: 0.5em;
+
+h1,
+h2,
+h3,
+h4,
+p {
+    color: #fff;
 }
 
-h1:nth-child(1) > span:nth-child(2) {
-    font-size: 0.5em;
-}
-/* end heading */
 
+
+
+div:nth-child(1) {
+    height: 400px;
+    width: 400px;
+    background-color: aqua;
+    background: rgba(0, 0, 0, 0.6);
+    margin: 10px;
+    opacity: 0.5;
+    border-radius: 10px;
+}
 
 section {
     text-align: center;
-    position: relative;
-    justify-items: center;
-    margin-bottom: 8px;
+    color: #fff;
+    transform: rotate(40deg);
 }
 
-article {
+section div:nth-child(1) * {
+    max-width: 30rem;
+}
+
+section div:nth-child(2) article {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-article p {
+section div:nth-child(2) article p {
     order: 1;
     flex-basis: 100%;
 }
 
-
-section article div {
-    margin-left: 6px;
-    color: var(--groen);
-    opacity: 0.6;
-    font-weight: 400;
+section div:nth-child(1) * :not(header *){
+    display: none;
 }
 
-section article div::before {
-    content: '€';
-    color: var(--groen);
-    opacity: 0.6;
-    font-weight: 500;
+section div:nth-child(1):active * {
+    display: block;
+}
+
+section div:nth-child(1):hover {
+    box-shadow: 0 3px 3px -2px rgba(127,127,150,.05),
+    0 3px 4px 0 rgba(127,127,150,.03),
+    0 1px 8px 0 rgba(127,127,150,.15),
+    0 1rem 1rem -.8rem rgba(127,127,150,.3);
+    transform: translateY(-.25rem);
+    animation: glow 1s infinite alternate;
+    animation: rotate 1s infinite alternate;
 }
 
 
 
-div:nth-child(1) > section:nth-child(6) {
-    grid-column: 1/6;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-    grid-auto-rows: auto;
-    margin: 36px 16px 24px;
-    position: relative;
-    place-items: center; 
+
+section header:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-div:nth-child(1) > section:nth-child(7) {
-    grid-column: 1/6;
-    grid-row: 5/6;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-    grid-auto-rows: auto;
-    margin: 36px 16px 24px;
-    position: relative;
-    place-items: center;
+section div:nth-child(1):active header:nth-child(1) {
+    height: 20%;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
 }
 
-blockquote {
-    color: var(--groen);
-    font-weight: 900;
+section div:nth-child(1):active {
+    animation-iteration-count: 1;
+    -webkit-animation-name: flipInX;
+    animation-name: flipInX;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+section div:nth-child(1):hover header:nth-child(1) {
+    color: white;
+    opacity: 1;
+    /* font-size: 1.5rem; */
+    /* animation: text-shadow 0.6s both; */
+}
+
+section div:nth-child(1):hover {
+    opacity: 1;
+}
+
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px -10px var(--groen);
+    } to {
+        box-shadow: 0 0 10px 10px var(--groen);
+    }
+}
+
+@keyframes flipInX {
+    0% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0;
+    }
+    40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    }
+    60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+    }
+    80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+    100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    }
+    }
+  
+@keyframes text-shadow {
+    0% {
+        text-shadow: 0 0 0 rgba(0,0,0,0);
+    }
+    100% {
+        text-shadow: 0 0 18px rgba(0,0,0 0.35);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(20deg);
+    }
+    20% {
+        transform: rotate(40deg);  
+    }
 }

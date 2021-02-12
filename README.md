@@ -11,6 +11,7 @@ prefers-color-scheme
 
 ### Week 1 :
 
+![week1](https://raw.githubusercontent.com/RowinRuizendaal/css-to-the-rescue-2021/master/docs/img/week1.png)
 
 
 

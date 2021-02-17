@@ -14,6 +14,41 @@ prefers-color-scheme
 ![week1](https://raw.githubusercontent.com/RowinRuizendaal/css-to-the-rescue-2021/master/docs/img/week1.png)
 
 
+### Experimented with:
+
+Css grid
+CSS selectors
+
+### Week 2:
+
+I found out that i was not happy with what I deliverd at week 1, so I decided to make something totally diffent:
+
+![week2](https://raw.githubusercontent.com/RowinRuizendaal/css-to-the-rescue-2021/master/docs/img/week2.png)
+
+### Experimented with:
+
+Transform - Rotate
+Transparancy,
+animations
+
+
+### Week 3:
+
+I found out that i was not happy with what I deliverd at week 1 & week 2, so I decided to make something again totally diffent:
+
+![week2](https://raw.githubusercontent.com/RowinRuizendaal/css-to-the-rescue-2021/master/docs/img/week3.png)
+
+
+### Experimented with:
+
+Linear-gradient
+repeating-linear-gradient
+blend-mode
+animations
+animation-delay
+filter: hue-rotate, dropshadow
+box-shadow
+skew
 
 
 # CSS to the Rescue @cmda-minor-web 2020 - 2021

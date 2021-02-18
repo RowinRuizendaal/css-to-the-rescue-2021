@@ -18,19 +18,7 @@
 }
 
 
-/* main :not(header *) {
-    display: none;
-} */
-
-body>header:nth-child(1) {
-    height: 100vh;
-    background: linear-gradient(45deg, var(--donkerblauw), transparent), repeating-linear-gradient(45deg, var(--donkerblauw) 0%, var(--donkerblauw) 5%, transparent 5%, transparent 10%), var(--donkerblauw) repeating-linear-gradient(-45deg, var(--donkerblauw) 0%, var(--groen) 5%, transparent 5%, transparent 10%);
-    background-blend-mode: multiply;
-}
-
-
-/* headings */
-
+/* Global declarations */
 h1,
 p,
 h2 {
@@ -43,7 +31,13 @@ h1 {
 }
 
 
-/* first header of body */
+/* HEADING BEGIN OF PAGE */
+body>header:nth-child(1) {
+    height: 100vh;
+    background: linear-gradient(45deg, var(--donkerblauw), transparent), repeating-linear-gradient(45deg, var(--donkerblauw) 0%, var(--donkerblauw) 5%, transparent 5%, transparent 10%), var(--donkerblauw) repeating-linear-gradient(-45deg, var(--donkerblauw) 0%, var(--groen) 5%, transparent 5%, transparent 10%);
+    background-blend-mode: multiply;
+}
+
 
 body>header:nth-child(1) {
     display: flex;
@@ -54,38 +48,10 @@ body>header:nth-child(1) {
 }
 
 
-/* first header paragraph */
-
 body>header:nth-child(1) p {
     font-size: 2vw;
     font-weight: 300;
 }
-
-
-/* Set main to flexbox */
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-
-/* Set all headers */
-
-header {
-    z-index: 2;
-}
-
-
-/* All sections */
-
-section {
-    margin-top: 10rem;
-    /* transform: perspective(400px) rotateY(5deg); */
-}
-
 
 /* Header spans */
 
@@ -187,7 +153,6 @@ header:nth-child(1) h1 span:nth-child(14) {
     opacity: 0.1;
 }
 
-
 /* Header paragraph */
 
 body>header:nth-child(1) p {
@@ -200,22 +165,35 @@ body>header:nth-child(1) p {
 }
 
 
-/* Everything insde the first div except the header */
+/* Main */
 
-section div:nth-child(1) * :not(header *) {
-    opacity: 0;
-    display: none;
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-div:nth-child(2) {
-    display: none;
+
+/* Set all headers */
+
+header {
+    z-index: 2;
+    position: relative;
+    background-color: yellow;
 }
 
-section div:nth-child(1) header {
-    text-align: center;
-}
 
-div:nth-child(1) {
+
+
+/* Section layouts */
+section:nth-child(1),
+section:nth-child(2),
+section:nth-child(3),
+section:nth-child(4),
+section:nth-child(5),
+section:nth-child(6),
+section:nth-child(7) {
     position: relative;
     display: flex;
     justify-content: center;
@@ -226,13 +204,19 @@ div:nth-child(1) {
     color: #fff;
     margin: 10px;
     border-radius: 20px;
-    z-index: 2;
+    /* z-index: 2; */
     box-shadow: 10px -10px 0 -3px var(--donkerblauw), 10px -10px var(--background), 20px -20px 0 -3px var(--background), 20px -20px var(--donkerblauw), 30px -30px 0 -3px var(--background), 30px -30px var(--donkerblauw), 40px -40px 0 -3px var(--background), 40px -40px var(--donkerblauw);
     background: linear-gradient(25deg, var(--donkerblauw), transparent), repeating-linear-gradient(45deg, var(--donkerblauw) 0%, var(--donkerblauw) 5%, transparent 5%, transparent 10%), var(--donkerblauw) repeating-linear-gradient(-45deg, var(--donkerblauw) 0%, var(--groen) 5%, transparent 5%, transparent 10%);
     background-blend-mode: hard-light;
+    margin-top: 10rem;
 }
 
-div:nth-child(1)::after {
+section:nth-child(1) > *:not(header) {
+    position: absolute;
+}
+
+
+section::after {
     content: '🧫';
     display: flex;
     justify-content: center;
@@ -249,7 +233,7 @@ div:nth-child(1)::after {
     border: 20px solid var(--donkerblauw);
 }
 
-div:nth-child(1)::before {
+section::before {
     content: '';
     background-image: url('https://img-fotki.yandex.ru/get/194549/29644339.5/0_d6c60_1d7815f0_orig');
     background-color: transparent;
@@ -269,43 +253,41 @@ div:nth-child(1)::before {
     animation: glow 1.5s linear infinite alternate;
 }
 
-div:nth-child(1):hover::before {
-    /* background: linear-gradient(20deg, var(--donkerblauw), transparent), repeating-linear-gradient(15deg, var(--donkerblauw) 0%, var(--donkerblauw) 5%, transparent 5%, transparent 10%), var(--donkerblauw) repeating-linear-gradient(-30deg, var(--donkerblauw) 0%, var(--groen) 5%, transparent 5%, transparent 10%); */
+section:hover::before {
     background-color: var(--donkerblauw);
-    /* background-blend-mode: difference; */
     transition: 1s;
 }
 
-div:nth-child(1):hover::after {
+section:hover::after {
     border: 20px solid var(--background);
 }
 
-div:nth-child(1):hover {
-    /* transform: rotate(-5deg); */
+section:hover {
     transform: skew(2deg, 2deg);
     transition: 1s;
     animation: remove 1.5s linear forwards;
 }
 
-div:nth-child(1):hover {
-    transform: skew(2deg, 2deg);
-    transition: 1s;
-    animation: remove 1.5s linear forwards;
-    /* display: block; */
-}
 
-div:nth-child(1):active * {
-    /* opacity: 1; */
-    /* display: block;
+section:nth-child(1):hover + article:nth-child(1) {
     animation: show 1.5s linear forwards;
-    animation: text 1.5s linear forwards; */
-    /* animation-iteration-count: 1;
-    animation-fill-mode: forwards; */
 }
 
-div:nth-child(1):hover+section div:nth-child(1) * {
-    display: block;
+
+/* Articles */
+
+article {
+    position: absolute;
+    z-index: -1;
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    color: white;
 }
+
+
+
+/* Keyframes */
 
 @keyframes text-shadow {
     0% {
@@ -345,27 +327,6 @@ div:nth-child(1):hover+section div:nth-child(1) * {
     }
 }
 
-@keyframes shadow-wave {
-    0% {
-        /* border: 3px solid var(--primary); */
-        box-shadow: 10px -10px 0 -3px var(--donkerblauw), 10px -10px var(--background), 20px -20px 0 -3px var(--background), 20px -20px var(--donkerblauw), 30px -30px 0 -3px var(--background), 30px -30px var(--donkerblauw), 40px -40px 0 -3px var(--background), 40px -40px var(--donkerblauw);
-    }
-    20% {
-        box-shadow: 10px -10px 0 -3px var(--donkerblauw), 10px -10px var(--background), 20px -20px 0 -3px var(--background), 20px -20px var(--donkerblauw), 30px -30px 0 -3px var(--background), 30px -30px var(--donkerblauw), 40px -40px 0 -3px var(--background), 40px -40px var(--donkerblauw);
-    }
-    40% {
-        box-shadow: 10px -10px 0 -3px var(--donkerblauw), 10px -10px var(--background), 20px -20px 0 -3px var(--background), 20px -20px var(--donkerblauw), 30px -30px 0 -3px var(--background), 30px -30px var(--donkerblauw), 40px -40px 0 -3px var(--background), 40px -40px var(--donkerblauw);
-    }
-    60% {
-        box-shadow: 10px -10px 0 -3px var(--donkerblauw), 10px -10px var(--background), 20px -20px 0 -3px var(--background), 20px -20px var(--donkerblauw), 30px -30px 0 -3px var(--background), 30px -30px var(--donkerblauw), 40px -40px 0 -3px var(--background), 40px -40px var(--donkerblauw);
-    }
-    80% {
-        box-shadow: 10px -10px 0 -3px var(--donkerblauw), 10px -10px var(--background), 20px -20px 0 -3px var(--background), 20px -20px var(--donkerblauw), 30px -30px 0 -3px var(--background), 30px -30px var(--donkerblauw), 40px -40px 0 -3px var(--background), 40px -40px var(--donkerblauw);
-    }
-    100% {
-        box-shadow: 10px -10px 0 -3px var(--donkerblauw), 10px -10px var(--background), 20px -20px 0 -3px var(--background), 20px -20px var(--donkerblauw), 30px -30px 0 -3px var(--background), 30px -30px var(--donkerblauw), 40px -40px 0 -3px var(--background), 40px -40px var(--donkerblauw);
-    }
-}
 
 @keyframes glow {
     to {
@@ -384,18 +345,9 @@ div:nth-child(1):hover+section div:nth-child(1) * {
 
 @keyframes show {
     from {
-        display: none;
+        z-index: -2;
     }
     to {
-        display: block;
-    }
-}
-
-@keyframes test {
-    from {
-        background: linear-gradient(20deg, var(--donkerblauw), transparent), repeating-linear-gradient(15deg, var(--donkerblauw) 0%, var(--donkerblauw) 5%, transparent 5%, transparent 10%), var(--donkerblauw) repeating-linear-gradient(-30deg, var(--donkerblauw) 0%, var(--groen) 5%, transparent 5%, transparent 10%);
-    }
-    to {
-        background: linear-gradient(20deg, var(--donkerblauw), transparent), repeating-linear-gradient(15deg, var(--donkerblauw) 0%, var(--donkerblauw) 5%, transparent 5%, transparent 10%), yellow repeating-linear-gradient(-30deg, var(--donkerblauw) 0%, var(--groen) 5%, transparent 5%, transparent 10%);
+        z-index: 1;
     }
 }

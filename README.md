@@ -17,6 +17,7 @@ prefers-color-scheme
 ### Experimented with:
 
 Css grid
+
 CSS selectors
 
 ### Week 2:
@@ -28,7 +29,9 @@ I found out that i was not happy with what I deliverd at week 1, so I decided to
 ### Experimented with:
 
 Transform - Rotate
-Transparancy,
+
+Transparancy
+
 animations
 
 
@@ -42,12 +45,19 @@ I found out that i was not happy with what I deliverd at week 1 & week 2, so I d
 ### Experimented with:
 
 Linear-gradient
+
 repeating-linear-gradient
+
 blend-mode
+
 animations
+
 animation-delay
+
 filter: hue-rotate, dropshadow
+
 box-shadow
+
 skew
 
 

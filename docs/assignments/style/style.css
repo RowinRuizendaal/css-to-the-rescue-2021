@@ -28,6 +28,9 @@ body>header:nth-child(1) {
     background-blend-mode: multiply;
 }
 
+
+/* headings */
+
 h1,
 p,
 h2 {
@@ -39,6 +42,9 @@ h1 {
     font-weight: 600;
 }
 
+
+/* first header of body */
+
 body>header:nth-child(1) {
     display: flex;
     justify-content: center;
@@ -47,10 +53,16 @@ body>header:nth-child(1) {
     min-height: 100vh;
 }
 
+
+/* first header paragraph */
+
 body>header:nth-child(1) p {
     font-size: 2vw;
     font-weight: 300;
 }
+
+
+/* Set main to flexbox */
 
 main {
     display: flex;
@@ -59,14 +71,23 @@ main {
     flex-wrap: wrap;
 }
 
+
+/* Set all headers */
+
 header {
     z-index: 2;
 }
+
+
+/* All sections */
 
 section {
     margin-top: 10rem;
     /* transform: perspective(400px) rotateY(5deg); */
 }
+
+
+/* Header spans */
 
 header:nth-child(1) h1 span:nth-child(1) {
     animation: text 1s ease forwards;
@@ -166,6 +187,9 @@ header:nth-child(1) h1 span:nth-child(14) {
     opacity: 0.1;
 }
 
+
+/* Header paragraph */
+
 body>header:nth-child(1) p {
     color: white;
     font-weight: 300;
@@ -174,6 +198,9 @@ body>header:nth-child(1) p {
     filter: drop-shadow(16px 20px var(--donkerblauw)) invert(15%);
     animation-delay: 4s;
 }
+
+
+/* Everything insde the first div except the header */
 
 section div:nth-child(1) * :not(header *) {
     opacity: 0;

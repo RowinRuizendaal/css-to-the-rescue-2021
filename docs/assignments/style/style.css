@@ -8,17 +8,52 @@
 :root {
     --donkerblauw: #1A5E63;
     --groen: white;
-    --primary: #22D2A0;
-    --secondary: #192824;
     --background: #192824;
-    --green: #1FC11B;
-    --yellow: #FFD913;
-    --orange: #FF9C55;
-    --red: #FF5555;
+}
+
+:nth-of-type(1) {
+    --nth-child: 1
+}
+
+:nth-of-type(2) {
+    --nth-child: 2
+}
+
+:nth-of-type(3) {
+    --nth-child: 3
+}
+
+:nth-of-type(4) {
+    --nth-child: 4
+}
+
+:nth-of-type(5) {
+    --nth-child: 5
+}
+
+:nth-of-type(6) {
+    --nth-child: 6
+}
+
+:nth-of-type(7) {
+    --nth-child: 7
+}
+
+:nth-of-type(8) {
+    --nth-child: 8
+}
+
+:nth-of-type(9) {
+    --nth-child: 9
+}
+
+:nth-of-type(10) {
+    --nth-child: 10
 }
 
 
 /* Global declarations */
+
 h1,
 p,
 h2 {
@@ -32,12 +67,12 @@ h1 {
 
 
 /* HEADING BEGIN OF PAGE */
+
 body>header:nth-child(1) {
     height: 100vh;
     background: linear-gradient(45deg, var(--donkerblauw), transparent), repeating-linear-gradient(45deg, var(--donkerblauw) 0%, var(--donkerblauw) 5%, transparent 5%, transparent 10%), var(--donkerblauw) repeating-linear-gradient(-45deg, var(--donkerblauw) 0%, var(--groen) 5%, transparent 5%, transparent 10%);
     background-blend-mode: multiply;
 }
-
 
 body>header:nth-child(1) {
     display: flex;
@@ -47,40 +82,34 @@ body>header:nth-child(1) {
     min-height: 100vh;
 }
 
-
 body>header:nth-child(1) p {
     font-size: 2vw;
     font-weight: 300;
 }
 
+
 /* Header spans */
 
-header:nth-child(1) h1 span:nth-child(1) {
-    animation: text 1s ease forwards;
-    animation: line-animation 2s ease forwards;
-    transition: ease-in-out;
+header:nth-child(1) h1 span {
     opacity: 0.1;
+    animation: text 1s ease forwards;
+    transition: ease-in-out;
+}
+
+header:nth-child(1) h1 span:nth-child(1) {
+    animation: line-animation 2s ease forwards;
 }
 
 header:nth-child(1) h1 span:nth-child(2) {
-    animation: text 1s ease forwards;
-    transition: ease-in-out;
     animation: line-animation 3s ease forwards;
-    opacity: 0.1;
 }
 
 header:nth-child(1) h1 span:nth-child(3) {
-    animation: text 1s ease forwards;
-    transition: ease-in-out;
     animation: line-animation 4s ease forwards;
-    opacity: 0.1;
 }
 
 header:nth-child(1) h1 span:nth-child(4) {
-    animation: text 1s ease forwards;
-    transition: ease-in-out;
     animation: line-animation 5s ease forwards;
-    opacity: 0.1;
 }
 
 header:nth-child(1) h1 span:nth-child(5) {
@@ -91,67 +120,41 @@ header:nth-child(1) h1 span:nth-child(5) {
 }
 
 header:nth-child(1) h1 span:nth-child(6) {
-    animation: text 1s ease forwards;
-    transition: ease-in-out;
     animation: line-animation 6s ease forwards;
-    opacity: 0.1;
 }
 
 header:nth-child(1) h1 span:nth-child(7) {
-    animation: text 1s ease forwards;
     animation: line-animation 7s ease forwards;
-    transition: ease-in-out;
-    opacity: 0.1;
 }
 
 header:nth-child(1) h1 span:nth-child(8) {
-    animation: text 1s ease forwards;
     animation: line-animation 8s ease forwards;
-    transition: ease-in-out;
-    opacity: 0.1;
 }
 
 header:nth-child(1) h1 span:nth-child(9) {
-    animation: text 1s ease forwards;
     animation: line-animation 9s ease forwards;
-    transition: ease-in-out;
-    opacity: 0.1;
 }
 
 header:nth-child(1) h1 span:nth-child(10) {
-    animation: text 1s ease forwards;
     animation: line-animation 10s ease forwards;
-    transition: ease-in-out;
-    opacity: 0.1;
 }
 
 header:nth-child(1) h1 span:nth-child(11) {
-    animation: text 1s ease forwards;
     animation: line-animation 11s ease forwards;
-    transition: ease-in-out;
-    opacity: 0.1;
 }
 
 header:nth-child(1) h1 span:nth-child(12) {
-    animation: text 1s ease forwards;
     animation: line-animation 12s ease forwards;
-    transition: ease-in-out;
-    opacity: 0.1;
 }
 
 header:nth-child(1) h1 span:nth-child(13) {
-    animation: text 1s ease forwards;
     animation: line-animation 13s ease forwards;
-    transition: ease-in-out;
-    opacity: 0.1;
 }
 
 header:nth-child(1) h1 span:nth-child(14) {
-    animation: text 1s ease forwards;
     animation: line-animation 14s ease forwards;
-    transition: ease-in-out;
-    opacity: 0.1;
 }
+
 
 /* Header paragraph */
 
@@ -168,10 +171,12 @@ body>header:nth-child(1) p {
 /* Main */
 
 main {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding-bottom: 200px;
 }
 
 
@@ -180,21 +185,22 @@ main {
 header {
     z-index: 2;
     position: relative;
-    background-color: yellow;
+    background-color: darkblue;
 }
 
 
+/* Div behind the sections */
+
+section:nth-child(1)>div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 /* Section layouts */
-section:nth-child(1),
-section:nth-child(2),
-section:nth-child(3),
-section:nth-child(4),
-section:nth-child(5),
-section:nth-child(6),
-section:nth-child(7) {
-    position: relative;
+
+section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -204,53 +210,43 @@ section:nth-child(7) {
     color: #fff;
     margin: 10px;
     border-radius: 20px;
-    /* z-index: 2; */
     box-shadow: 10px -10px 0 -3px var(--donkerblauw), 10px -10px var(--background), 20px -20px 0 -3px var(--background), 20px -20px var(--donkerblauw), 30px -30px 0 -3px var(--background), 30px -30px var(--donkerblauw), 40px -40px 0 -3px var(--background), 40px -40px var(--donkerblauw);
     background: linear-gradient(25deg, var(--donkerblauw), transparent), repeating-linear-gradient(45deg, var(--donkerblauw) 0%, var(--donkerblauw) 5%, transparent 5%, transparent 10%), var(--donkerblauw) repeating-linear-gradient(-45deg, var(--donkerblauw) 0%, var(--groen) 5%, transparent 5%, transparent 10%);
     background-blend-mode: hard-light;
     margin-top: 10rem;
 }
 
-section:nth-child(1) > *:not(header) {
-    position: absolute;
-}
-
-
-section::after {
-    content: '🧫';
+section::after,
+section::before {
+    content: '';
     display: flex;
+    border-radius: 50%;
+    animation: glow 1.5s linear infinite alternate;
+    box-shadow: 0px 0px 9px 4px var(--background);
     justify-content: center;
     align-items: center;
+    border: 2px solid white;
+}
+
+section::after {
     position: absolute;
     background-color: white;
     height: 100px;
     width: 100px;
-    border-radius: 50%;
-    border: 2px solid white;
     opacity: 0.2;
-    box-shadow: 0px 0px 9px 4px var(--background);
-    animation: glow 1.5s linear infinite alternate;
     border: 20px solid var(--donkerblauw);
 }
 
 section::before {
-    content: '';
     background-image: url('https://img-fotki.yandex.ru/get/194549/29644339.5/0_d6c60_1d7815f0_orig');
     background-color: transparent;
     transition: all 0.35s linear;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 0 5px 0 0;
     position: absolute;
     right: 20px;
     bottom: 15px;
     height: 52px;
     width: 52px;
-    border-radius: 50%;
-    border: 2px solid white;
-    box-shadow: 0px 0px 9px 4px var(--background);
-    animation: glow 1.5s linear infinite alternate;
 }
 
 section:hover::before {
@@ -262,29 +258,59 @@ section:hover::after {
     border: 20px solid var(--background);
 }
 
+
+/* 
 section:hover {
-    transform: skew(2deg, 2deg);
     transition: 1s;
     animation: remove 1.5s linear forwards;
+    animation: show linear forwards;
+} */
+
+main>section:hover header~article {
+    --width: 50vw;
+    --top: 380px + 10rem;
+    opacity: 1;
+    background-color: red;
+    color: white;
+    backface-visibility: hidden;
+    z-index: 1;
+    width: var(--width);
+    height: 200px;
+    left: 0;
+    /* left: calc(var(--width) * var(--nth-child) - var(--width)); */
+    /* top: calc(var(--top)); */
+    top: calc((var(--nth-child) / 2) * var(--top));
+}
+
+main>section:hover header~article:nth-of-type(2n) {
+    top: calc((var(--nth-child) / 2) * var(--top) - var(--top) / 2);
+    left: 50vw;
+}
+
+main>section:hover:nth-of-type(n+5) header~article {
+    top: calc(760px + 20rem);
+}
+
+section:nth-child(1):hover+article {
+    z-index: 1;
 }
 
 
-section:nth-child(1):hover + article:nth-child(1) {
-    animation: show 1.5s linear forwards;
-}
+/* main>section article:nth-child(2n+1) {
+    left: 50vw;
+} */
 
 
 /* Articles */
 
 article {
     position: absolute;
+    height: 300px;
+    width: 300px;
     z-index: -1;
-    height: 200px;
-    width: 200px;
     background-color: red;
-    color: white;
+    opacity: 0;
 }
-
 
 
 /* Keyframes */
@@ -327,7 +353,6 @@ article {
     }
 }
 
-
 @keyframes glow {
     to {
         box-shadow: 0px 0px 30px 20px var(--donkerblauw);
@@ -345,9 +370,11 @@ article {
 
 @keyframes show {
     from {
-        z-index: -2;
+        z-index: -1;
+        position: absolute;
     }
     to {
         z-index: 1;
+        position: inherit;
     }
 }

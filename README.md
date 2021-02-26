@@ -60,6 +60,8 @@ box-shadow
 
 skew
 
+svg: Filter, mask & shapes
+
 
 # CSS to the Rescue @cmda-minor-web 2020 - 2021
 

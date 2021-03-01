@@ -79,6 +79,14 @@ skew
 
 svg: Filter, mask & shapes
 
+### Dark mode
+
+![darkMode](https://raw.githubusercontent.com/RowinRuizendaal/css-to-the-rescue-2021/master/docs/img/dark-mode.png)
+
+### Light mode
+
+![LightMode](https://raw.githubusercontent.com/RowinRuizendaal/css-to-the-rescue-2021/master/docs/img/light-mode.png)
+
 
 # CSS to the Rescue @cmda-minor-web 2020 - 2021
 

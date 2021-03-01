@@ -61,7 +61,8 @@
 h1,
 p,
 h2,
-h3 {
+h3,
+div {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -182,7 +183,7 @@ body>header:nth-child(1) svg {
     height: 100vh;
 }
 
-section>header:nth-child(1)>div {
+section>header>div {
     display: block;
     height: 10rem;
     width: 10rem;
@@ -195,22 +196,18 @@ section>header:nth-child(1)>div {
 
 /* Star SVG */
 
-section:nth-child(1)>header:nth-child(1)>div:nth-child(3) {
+section:nth-child(1)>header div {
     mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/star-mask.svg);
     filter: url(#filter);
-    background-color: var(--donkerblauw);
-}
-
-body>main:nth-child(2)>section:nth-child(2)>header:nth-child(1)>div:nth-child(3) {
-    overflow: hidden;
-    text-align: center;
 }
 
 
-/* Blockquote */
+/* Knife and fork SVG */
 
-blockquote {
-    display: none;
+section:nth-child(2) header div svg {
+    clip-path: polygon(3.59% 7.03%, 98.75% 3.13%, 82.03% 81.25%, 13.28% 92.19%);
+    fill: white;
+    filter: url(#filter);
 }
 
 
@@ -222,7 +219,6 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding-bottom: 2000px;
 }
 
 
@@ -232,15 +228,6 @@ header {
     z-index: 2;
     position: relative;
     text-align: center;
-}
-
-
-/* Div behind the sections */
-
-section:nth-child(1)>div:nth-child(2) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
@@ -260,6 +247,7 @@ section {
     background: var(--gradient);
     background-blend-mode: multiply;
     margin-top: 10rem;
+    border: 10px solid var(--groen);
 }
 
 section:hover::before {
@@ -271,10 +259,10 @@ section:hover::after {
     border: 20px solid var(--donkerblauw);
 }
 
-main>section:hover header~article {
+section:hover header~article {
     opacity: 1;
     background: var(--gradient);
-    background-blend-mode: multiply;
+    background-blend-mode: darken;
     color: white;
     backface-visibility: hidden;
     width: var(--width);
@@ -285,16 +273,16 @@ main>section:hover header~article {
     text-align: center;
 }
 
-main>section:hover header~article:nth-of-type(2n) {
+section:hover header~article:nth-of-type(2n) {
     top: calc((var(--nth-child) / 2) * var(--top) - var(--top) / 2 + 240px + 10rem);
     left: 50vw;
 }
 
-main>section:hover:nth-of-type(n+5) header~article {
+section:hover:nth-of-type(n+5) header~article {
     top: calc((var(--nth-child) / 2) * var(--top) + 660px + 20rem);
 }
 
-main>section:hover:nth-of-type(n+5) header~article:nth-of-type(2n) {
+section:hover:nth-of-type(n+5) header~article:nth-of-type(2n) {
     top: calc((var(--nth-child) / 2) * var(--top) - var(--top) / 2 + 660px + 20rem);
     left: 50vw;
 }
@@ -304,12 +292,33 @@ section:nth-child(1):hover+article {
 }
 
 
+/* Blockquote */
+
+blockquote {
+    display: none;
+}
+
+
 /* Articles */
 
 article {
     position: absolute;
     z-index: -1;
     opacity: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+article p {
+    order: 1;
+    flex-basis: 100%;
+}
+
+article div::before {
+    content: '€';
+    margin-left: 10px;
 }
 
 
@@ -366,12 +375,15 @@ article {
 
 @media (prefers-color-scheme: light) {
      :root {
-        --donkerblauw: #1A5E63;
-        --groen: white;
+        --donkerblauw: #20A39E;
+        --groen: #FFBA49;
         --gradient: linear-gradient(25deg, var(--groen), transparent), repeating-linear-gradient(45deg, var(--groen) 0%, var(--donkerblauw) 5%, transparent 5%, transparent 10%), var(--donkerblauw) repeating-linear-gradient(-45deg, var(--donkerblauw) 0%, var(--groen) 5%, transparent 5%, transparent 10%);
         --filter: hue-rotate(10deg);
     }
     section {
-        background-blend-mode: hard-light;
+        background-blend-mode: multiply;
+    }
+    section:hover header~article {
+        background-blend-mode: color-burn;
     }
 }

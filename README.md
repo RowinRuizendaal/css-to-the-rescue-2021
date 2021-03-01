@@ -4,9 +4,26 @@ I want to make a slick food menu card based on Grid/flexbox.
 
 ## requirements
 
-Two colors
+
+### Context
 
 prefers-color-scheme
+
+### Requirements
+
+Apply SVG in shapes, masks and filters
+
+Two colours
+
+Dark theme:
+
+#E86A92;
+#2B2D42;
+
+Light theme:
+
+#1A5E63;
+#FFFF;
 
 
 ### Week 1 :

@@ -250,6 +250,10 @@ section {
     border: 10px solid var(--groen);
 }
 
+section:focus  {
+    background-blend-mode: darken;
+}
+
 section:hover::before {
     background-color: var(--donkerblauw);
     transition: 1s;
@@ -259,7 +263,8 @@ section:hover::after {
     border: 20px solid var(--donkerblauw);
 }
 
-section:hover header~article {
+section:hover header~article,
+section:focus header~article {
     opacity: 1;
     background: var(--gradient);
     background-blend-mode: color-burn;
@@ -275,21 +280,25 @@ section:hover header~article {
 }
 
 
-section:hover header~article:nth-of-type(2n) {
+section:hover header~article:nth-of-type(2n),
+section:focus header~article:nth-of-type(2n) {
     top: calc((var(--nth-child) / 2) * var(--top) - var(--top) / 2 + 240px + 10rem);
     left: 50vw;
 }
 
-section:hover:nth-of-type(n+5) header~article {
+section:hover:nth-of-type(n+5) header~article,
+section:focus:nth-of-type(n+5) header~article {
     top: calc((var(--nth-child) / 2) * var(--top) + 660px + 20rem);
 }
 
-section:hover:nth-of-type(n+5) header~article:nth-of-type(2n) {
+section:hover:nth-of-type(n+5) header~article:nth-of-type(2n),
+section:focus:nth-of-type(n+5) header~article:nth-of-type(2n) {
     top: calc((var(--nth-child) / 2) * var(--top) - var(--top) / 2 + 660px + 20rem);
     left: 50vw;
 }
 
-section:nth-child(1):hover+article {
+section:nth-child(1):hover+article,
+section:nth-child(1):focus + article {
     z-index: 30;
 }
 
